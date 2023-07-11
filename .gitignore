@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Eclispe ###
+.metadata/.plugins/org.eclipse*
+

@@ -1,68 +1,52 @@
-README - Projeto DSList
+# Projeto CRUD Básico em Java com Spring e PostgreSQL
+## EM DESENVOLVIMENTO 
 
-Este é um guia para a instalação e execução do projeto DSList, desenvolvido com as seguintes tecnologias:
+Este é um projeto de exemplo que demonstra uma aplicação CRUD básica em Java, usando o framework Spring e o banco de dados PostgreSQL. O objetivo deste projeto é fornecer uma base para estudos e aprendizado sobre a construção de operações CRUD em uma aplicação web.
 
-    Java 17
-    Spring
-    Maven
-    Angular 15.1
-    Node.js 18 LTS
+## Tecnologias utilizadas
 
-Certifique-se de ter essas tecnologias instaladas em seu ambiente antes de prosseguir.
-Pré-requisitos
+- Java 17 LTS
+- Spring Framework 3.1.1
+- PostgreSQL
 
-Antes de começar, verifique se o seguinte software está instalado em sua máquina:
+## Configuração
 
-    Java 17 JDK: Download e instalação do Java 17 JDK
-    Maven: Download e instalação do Maven
-    Node.js 18 LTS: Download e instalação do Node.js 18 LTS
+Antes de executar a aplicação, certifique-se de ter instalado as seguintes ferramentas:
 
-Configuração do Backend
+- JDK 17: [Download JDK](https://www.oracle.com/java/technologies/downloads/)
+- Spring Framework 3.1.1: [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/3.1.1.RELEASE/spring-framework-reference/)
+- PostgreSQL: [Download PostgreSQL](https://www.postgresql.org/download/)
 
-    Clone o repositório do projeto:
+## Instalação
 
-bash
+Siga estas etapas para executar o projeto em sua máquina local:
 
-git clone https://github.com/seu-usuario/dslist.git
+1. Clone este repositório: [https://github.com/RennanKelson/cadastrosjava.git](https://github.com/RennanKelson/cadastrosjava.git)
 
-    Navegue para o diretório do projeto:
+2. Importe o projeto em sua IDE Java preferida (por exemplo, IntelliJ, Eclipse).
 
-bash
+3. Certifique-se de que as dependências do projeto sejam resolvidas corretamente.
 
-cd dslist
+4. Configure as informações de conexão com o banco de dados no arquivo `application.properties` ou `application.yml`.
 
-    Compile e construa o projeto com Maven:
+5. Execute o aplicativo. Acesse a classe principal e execute o método `main()`.
 
-mvn clean install
+6. A aplicação será iniciada e estará disponível em [http://localhost:8080](http://localhost:8080).
 
-    Execute o projeto Spring:
+## Uso
 
-arduino
+- Acesse [http://localhost:8080](http://localhost:8080) em seu navegador.
+- A partir daí, você poderá cadastrar, visualizar, editar e excluir pessoas.
 
-mvn spring-boot:run
+## Contribuição
 
-Isso iniciará o servidor backend na porta padrão 8080.
-Configuração do Frontend
+Contribuições para este projeto são sempre bem-vindas. Sinta-se à vontade para abrir um "issue" descrevendo qualquer problema ou recurso que você queira adicionar. Se desejar contribuir diretamente, siga estas etapas:
 
-    Navegue para o diretório do frontend:
+1. Faça um "fork" deste repositório.
+2. Crie uma nova branch: `git checkout -b minha-nova-feature`
+3. Faça suas alterações e faça "commit" delas: `git commit -m 'Adicionando nova feature'`
+4. Envie suas alterações para o repositório remoto: `git push origin minha-nova-feature`
+5. Envie um "pull request" para revisão.
 
-bash
 
-cd dslist/frontend
 
-    Instale as dependências do Node.js:
-
-npm install
-
-    Inicie o servidor de desenvolvimento do Angular:
-
-ng serve
-
-Isso iniciará o servidor de desenvolvimento na porta padrão 4200.
-
-Acesse o aplicativo no navegador usando o URL: http://localhost:4200.
-Conclusão
-
-Após seguir essas etapas, o projeto DSList estará instalado e em execução em seu ambiente local. Certifique-se de que todos os passos foram concluídos com sucesso antes de prosseguir.
-
-Caso você tenha algum problema durante a instalação ou execução do projeto, consulte a documentação oficial das respectivas tecnologias para obter mais informações ou procure suporte na comunidade relacionada a cada tecnologia.

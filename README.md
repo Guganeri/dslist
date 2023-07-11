@@ -1,13 +1,15 @@
-# Projeto CRUD Básico em Java com Spring e PostgreSQL
+# Projeto Dev Superior
 ## EM DESENVOLVIMENTO 
 
-Este é um projeto de exemplo que demonstra uma aplicação CRUD básica em Java, usando o framework Spring e o banco de dados PostgreSQL. O objetivo deste projeto é fornecer uma base para estudos e aprendizado sobre a construção de operações CRUD em uma aplicação web.
+Este é um projeto realizado durante o curso do canal Dev Superior
 
 ## Tecnologias utilizadas
 
 - Java 17 LTS
-- Spring Framework 3.1.1
+- Spring Framework
 - PostgreSQL
+- Angular 15
+- Node 18
 
 ## Configuração
 
@@ -16,14 +18,16 @@ Antes de executar a aplicação, certifique-se de ter instalado as seguintes fer
 - JDK 17: [Download JDK](https://www.oracle.com/java/technologies/downloads/)
 - Spring Framework 3.1.1: [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/3.1.1.RELEASE/spring-framework-reference/)
 - PostgreSQL: [Download PostgreSQL](https://www.postgresql.org/download/)
+- Node: [Download Node](https://nodejs.org/en/download)
+- Angular: [Install Angular](https://angular.io/guide/setup-local)
 
 ## Instalação
 
 Siga estas etapas para executar o projeto em sua máquina local:
 
-1. Clone este repositório: [https://github.com/RennanKelson/cadastrosjava.git](https://github.com/RennanKelson/cadastrosjava.git)
+1. Clone este repositório: [https://github.com/Guganeri/dslist.git](https://github.com/Guganeri/dslist.git)
 
-2. Importe o projeto em sua IDE Java preferida (por exemplo, IntelliJ, Eclipse).
+2. Importe o projeto em sua IDE Java preferida para o backend (por exemplo, IntelliJ, Eclipse).
 
 3. Certifique-se de que as dependências do projeto sejam resolvidas corretamente.
 
@@ -33,10 +37,17 @@ Siga estas etapas para executar o projeto em sua máquina local:
 
 6. A aplicação será iniciada e estará disponível em [http://localhost:8080](http://localhost:8080).
 
+7. Para o frontend, após ter instaldo o node e o angular, entre na pasta frontend e execute por linha de comando :
+
+```
+$ npm install
+$ ng s
+```
+
 ## Uso
 
-- Acesse [http://localhost:8080](http://localhost:8080) em seu navegador.
-- A partir daí, você poderá cadastrar, visualizar, editar e excluir pessoas.
+- Acesse [http://localhost:8080](http://localhost:8080) em seu navegador para acessar o backend.
+- E [http://localhost:4200](http://localhost:4200) em seu navegador para acessar o frontend.
 
 ## Contribuição
 

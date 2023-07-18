@@ -12,9 +12,11 @@ export class GamesService {
   constructor(private httpClient: HttpClient) { }
 
   apiUrl = environment.apiGamesUrl;
-  resourceFoundAllGames = 'games';
+  resourceFindndAllGames = 'games';
 
   findAllGames(): Observable<IGameModel[]>{
-    return this.httpClient.get<IGameModel[]>(`${this.apiUrl}${this.resourceFoundAllGames}`)
+    return this.httpClient.get<IGameModel[]>(
+      `${this.apiUrl}${this.resourceFindndAllGames}`
+    );
   }
 }

@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-3" role="button" routerLink="/games">Games</li>
+        <li class="nav-item" *ngFor="let gameList of gamesList">
+          <a class="nav-link" (click)="findByGameList(gameList.id)" role="button">{{ gameList.name }}</a>
+        </li>
+      </ul>
+  </nav>
+</div>

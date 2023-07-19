@@ -1,12 +1,24 @@
-<div class="container-fluid">
-  <div class="mt-2 mx-2">
-    <button class="btn btn-secondary" routerLink="games-list">Games List</button>
+<div class="container-fluid bg-dark" style="background-size: 100% 100%; min-height: 100vh; max-height: max-content;">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link mx-3" role="button" routerLink="">Login Screen</a>
+        </li>
+        <li>
+          <a class="nav-link mx-2" role="button" (click)="loadAllGames()">All Games</a>
+        </li>
+        <li class="nav-item" *ngFor="let gameList of gamesList">
+          <a class="nav-link mx-2" (click)="findByGameList(gameList.id)" role="button">{{ gameList.name }}</a>
+        </li>
+      </ul>
+    </nav>
   </div>
   <div class="row mt-2">
       <div class="col-12">
           <div class="row">
               <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" *ngFor="let game of games">
-                  <div class="card h-100">
+                  <div class="card h-100 bg-light">
                       <img [src]="game.imgUrl" class="card-img-top img-fluid" alt="Image Game">
                       <div class="card-body">
                           <h5 class="card-title">{{ game.title }}</h5>

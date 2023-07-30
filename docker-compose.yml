@@ -1,8 +1,76 @@
-version: "3"
+version: "3.7"
 
 services:
+  # ====================================================================================================================
+  # POSTGRES SERVER
+  # ====================================================================================================================
+  pg-docker:
+    image: postgres:14-alpine
+    container_name: dev-postgresql
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: mydatabase
+      POSTGRES_PASSWORD: 1234567
+    ports:
+      - 5433:5432
+    volumes:
+      - ./.data/postgresql/data:/var/lib/postgresql/data
+    networks:
+      - dev-network
+  # ====================================================================================================================
+  # PGADMIN
+  # ====================================================================================================================
+  # pgadmin-docker:
+  #   image: dpage/pgadmin4
+  #   container_name: dev-pgadmin
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: me@example.com
+  #     PGADMIN_DEFAULT_PASSWORD: 1234567
+  #   ports:
+  #     - 5050:80
+  #   volumes:
+  #     - ./.data/pgadmin:/var/lib/pgadmin
+  #   depends_on:
+  #     - pg-docker
+  #   networks:
+  #     - dev-network
+
+  # ====================================================================================================================
+  # BACKEND
+  # ====================================================================================================================
+  backend:
+    restart: on-failure:5
+    container_name: backend
+    build: "./backend"
+    depends_on:
+      - pg-docker
+    networks:
+      - dev-network
+    environment:
+      - DB_URL=jdbc:postgresql://mydatabase:5432/mydatabase
+      - DB_USERNAME=mydatabase
+      - DB_PASSWORD=1234567
+    ports:
+      - 8080:8080
+
+  # ====================================================================================================================
+  # FRONTEND
+  # ====================================================================================================================
+
   frontend:
+    restart: on-failure:6
     container_name: frontend
     build: "./frontend"
     ports:
       - 4200:4200
+    depends_on:
+      - backend
+    networks:
+      - dev-network
+
+# ======================================================================================================================
+# REDE
+# ======================================================================================================================
+networks:
+  dev-network:
+    driver: bridge
